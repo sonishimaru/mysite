@@ -1,0 +1,38 @@
+# scrapbox-shot config - copy to ~/.config/scrapbox-shot/config
+#
+# This file is sourced by bash, so it is shell syntax. It holds a Gyazo token,
+# so keep it out of git and `chmod 600` it.
+
+# Scrapbox (Cosense) project name - the part after scrapbox.io/ in your URLs.
+SCRAPBOX_PROJECT="your-project"
+
+# Gyazo access token: https://gyazo.com/oauth/applications
+# Create an application, then copy its access token.
+GYAZO_ACCESS_TOKEN=""
+
+# interactive = crosshair selection, window = click a window, screen = main display
+CAPTURE_MODE="interactive"
+
+# Keep a local copy of every shot. Leave empty to keep nothing.
+ARCHIVE_DIR="$HOME/Pictures/ScrapboxShots"
+
+# Appended as the last line of every page. Empty for no tag.
+PAGE_TAGS="#screenshot"
+
+# Page title: TITLE_PREFIX + timestamp + " - " + front app name.
+TITLE_PREFIX=""
+TITLE_DATE_FORMAT="%Y-%m-%d %H:%M:%S"
+
+# Written into the body as a Scrapbox link, so shots group by day.
+DATE_LINK_FORMAT="%Y/%m/%d"
+
+# 1 = create the page without stealing focus from what you were doing.
+OPEN_IN_BACKGROUND=1
+
+# 1 = post a macOS notification when the page is created.
+NOTIFY=1
+
+# 1 = ask System Events for the frontmost app when --app was not passed.
+# Hammerspoon already passes it, so this stays off to avoid an extra
+# automation permission prompt.
+DETECT_FRONT_APP=0
